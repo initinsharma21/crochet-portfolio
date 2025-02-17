@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neko's Hookwork</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 15px;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        .intro {
+            padding: 15px;
+            font-size: 18px;
+            color: #444;
+            max-width: 800px;
+            margin: 15px auto;
+            line-height: 1.5;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+        }
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid black;
+            box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #222;
+            color: #fff;
+            padding: 12px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="{% static 'images/logo.jpg' %}" alt="Logo" class="logo">
+        Neko's Hookwork
+    </header>
+
+    <section class="intro">
+        <p>Welcome to <strong>Neko's Hookwork</strong> – a collection of handcrafted crochet pieces made with love and creativity. Explore our unique designs, each stitch woven with passion.</p>
+    </section>
+
+    <section class="gallery">
+        <img src="{% static 'images/image1.jpeg' %}" alt="Crochet Image 1">
+        <img src="{% static 'images/image2.jpeg' %}" alt="Crochet Image 2">
+        <img src="{% static 'images/image3.jpeg' %}" alt="Crochet Image 3">
+        <img src="{% static 'images/image4.jpeg' %}" alt="Crochet Image 4">
+        <img src="{% static 'images/image5.jpeg' %}" alt="Crochet Image 5">
+    </section>
+
+    <footer>Follow us on Instagram: @nekos_hookwork</footer>
+</body>
+</html>
